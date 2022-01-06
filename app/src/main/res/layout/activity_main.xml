@@ -34,13 +34,14 @@
         android:textSize="16sp" />
 
     <Button
-        android:id="@+id/button_home"
+        android:id="@+id/button_main_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
-        android:paddingVertical="7dp"
         android:elevation="10dp"
+        android:paddingVertical="7dp"
         android:text="@string/get_started"
-        android:textSize="16sp" />
+        android:onClick="startHome"
+        android:textSize="16sp"/>
 
 </LinearLayout>

@@ -3,4 +3,7 @@
     <string name="get_started">GET STARTED</string>
     <string name="home_definition">Capture cups of lattes, frapuccinos, or anything else that can be counted.</string>
     <string name="home_tittle">Counters</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_counter">+ ADD COUNTER</string>
 </resources>
