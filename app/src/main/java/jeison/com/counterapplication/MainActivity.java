@@ -18,9 +18,13 @@ public class MainActivity extends AppCompatActivity {
         this.setContentView(R.layout.activity_main);
 
        Button button = findViewById(R.id.button_home);
-       button.setOnClickListener(v -> {
-           Intent intent = new Intent(getApplicationContext() , homeActivity.class);
-            startActivity(intent);
+       button.setOnClickListener(new View.OnClickListener() {
+
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(getApplicationContext() , homeActivity.class);
+                startActivity(intent);
+           }
        });
 
     }
