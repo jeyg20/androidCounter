@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Counter Application</string>
     <string name="get_started">GET STARTED</string>
+    <string name="home_description">Capture cups of lattes, frappuccinos, or anything else that can be counted.</string>
+    <string name="home_title">Counters</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_counter">+ ADD COUNTER</string>
+    <string name="no_counters_yet">No counters yet</string>
+    <string name="no_counters_paragraph">“When I started counting my blessings, my whole life turned around.” —Willie Nelson</string>
 </resources>
