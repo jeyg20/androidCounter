@@ -7,25 +7,48 @@
     tools:context=".homeActivity"
     android:paddingHorizontal="5dp">
 
-    <SearchView
-        android:id="@+id/sv_home"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tv_items"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:text="4 times"
+        app:layout_constraintBottom_toTopOf="@id/rvCounters"
+        app:layout_constraintEnd_toStartOf="@+id/tv_items_times"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/home_fragment"
+    <TextView
+        android:id="@+id/tv_items_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="17 times"
+        app:layout_constraintBottom_toTopOf="@id/rvCounters"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_items"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCounters"
+        android:layout_width="401dp"
+        android:layout_height="611dp"
+        app:layout_constraintBottom_toTopOf="@id/main_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_items" />
+    <RelativeLayout
+        android:id="@+id/rvBaseCounters"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:foregroundGravity=""
-        app:layout_constraintBottom_toTopOf="@+id/main_button"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@id/rvCounters"
+        app:layout_constraintEnd_toEndOf="@id/rvCounters"
+        app:layout_constraintStart_toStartOf="@id/rvCounters"
+        app:layout_constraintBottom_toBottomOf="@id/rvCounters">
 
-    </androidx.fragment.app.FragmentContainerView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
 
     <Button
         android:id="@+id/main_button"
@@ -38,7 +61,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/home_fragment"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintTop_toBottomOf="@id/rvCounters" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
