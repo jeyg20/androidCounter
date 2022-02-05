@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_counter_def"
         android:layout_width="320dp"
         android:layout_height="match_parent"
@@ -25,7 +25,7 @@
             android:paddingEnd="15dp"
             android:src="@drawable/ic_minus" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_counter_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
