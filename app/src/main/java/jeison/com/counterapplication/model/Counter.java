@@ -8,7 +8,7 @@ public class Counter {
         this.definition = definition;
         this.counterTime = counterTime;
     }
-
+    
     public String getDefinition() {
         return definition;
     }
