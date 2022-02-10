@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -27,11 +28,11 @@ public class CounterAdapter extends RecyclerView.Adapter<CounterAdapter.ViewHold
         this.counterList = counterList;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView counterTxt;
-        private TextView counterNum;
-        private Button sumCounter;
-        private Button subtractCounter;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        private final TextView counterTxt;
+        private final TextView counterNum;
+        private final Button sumCounter;
+        private final Button subtractCounter;
 
         public ViewHolder(final View view) {
             super(view);
@@ -58,6 +59,7 @@ public class CounterAdapter extends RecyclerView.Adapter<CounterAdapter.ViewHold
         int counterTime = counterList.get(position).getCounterTime();
         holder.counterNum.setText(String.valueOf(counterTime));
 
+        // counters val addition and subtraction
         holder.sumCounter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -16,18 +17,23 @@ import jeison.com.counterapplication.model.Counter;
 public class homeActivity extends AppCompatActivity {
     private ArrayList<Counter> countersList;
     private RecyclerView recyclerView;
+    private TextView totalCounters;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         recyclerView  = findViewById(R.id.rvCounters);
+        totalCounters = findViewById(R.id.tv_total_counter_val);
 
         countersList = new ArrayList<>();
 
         setDef();
         setAdapter();
-        
+
+        int listLength = countersList.size();
+
+        totalCounters.setText(String.valueOf(listLength));
     }
 
     private void setAdapter() {

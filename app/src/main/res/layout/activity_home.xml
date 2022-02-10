@@ -7,24 +7,13 @@
     tools:context=".homeActivity"
     android:paddingHorizontal="5dp">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_items"
+    <TextView
+        android:id="@+id/tv_total_counter_val"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="4 times"
-        app:layout_constraintBottom_toTopOf="@id/rvCounters"
-        app:layout_constraintEnd_toStartOf="@+id/tv_items_times"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_items_times"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="17 times"
         app:layout_constraintBottom_toTopOf="@id/rvCounters"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tv_items"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -34,7 +23,7 @@
         app:layout_constraintBottom_toTopOf="@id/main_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_items" />
+        app:layout_constraintTop_toBottomOf="@id/tv_total_counter_val" />
     <RelativeLayout
         android:id="@+id/rvBaseCounters"
         android:layout_width="match_parent"
@@ -48,7 +37,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </RelativeLayout>
-
 
     <Button
         android:id="@+id/main_button"
