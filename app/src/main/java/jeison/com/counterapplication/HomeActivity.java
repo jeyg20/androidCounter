@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import jeison.com.counterapplication.adapter.CounterAdapter;
-import jeison.com.counterapplication.model.Counter;
+import jeison.com.counterapplication.adapters.CounterAdapter;
+import jeison.com.counterapplication.models.Counter;
 
 public class HomeActivity extends AppCompatActivity {
     private ArrayList<Counter> countersList;
