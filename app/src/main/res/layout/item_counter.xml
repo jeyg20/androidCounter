@@ -1,40 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:paddingHorizontal="5dp"
+    tools:context=".HomeActivity">
+
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_counter_def"
-        android:layout_width="300dp"
-        android:layout_height="match_parent"
-        android:padding="10dp"
-        android:textSize="17sp" />
+        android:id="@+id/tvCounterDef"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@id/ivSubtractCounter"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="wrap"
+        tools:text="cup of coffee" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:paddingHorizontal="10dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ivSubtractCounter"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="75dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_minus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-        <Button
-            android:id="@+id/iv_subtract_counter"
-            android:layout_width="14dp"
-            android:layout_height="2dp"
-            android:background="@drawable/ic_minus"
-            android:paddingVertical="12dp"/>
-        <TextView
-            android:id="@+id/tv_counter_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="15dp"
-            android:textSize="20sp" />
-        <Button
-            android:id="@+id/iv_sum_counter"
-            android:layout_width="14dp"
-            android:layout_height="14dp"
-            android:background="@drawable/ic_plus"/>
-    </LinearLayout>
-</LinearLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCounterTime"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="46dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="5"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ivSumCounter"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tv_counter_def"-->
+    <!--        android:layout_width="300dp"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:padding="10dp"-->
+    <!--        android:textSize="17sp" />-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:paddingHorizontal="10dp"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/iv_subtract_counter"-->
+    <!--            android:layout_width="14dp"-->
+    <!--            android:layout_height="2dp"-->
+    <!--            android:background="@drawable/ic_minus"-->
+    <!--            android:paddingVertical="12dp"/>-->
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_counter_time"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:paddingHorizontal="15dp"-->
+    <!--            android:textSize="20sp" />-->
+    <!--        <Button-->
+    <!--            android:id="@+id/iv_sum_counter"-->
+    <!--            android:layout_width="14dp"-->
+    <!--            android:layout_height="14dp"-->
+    <!--            android:background="@drawable/ic_plus"/>-->
+    <!--    </LinearLayout>-->

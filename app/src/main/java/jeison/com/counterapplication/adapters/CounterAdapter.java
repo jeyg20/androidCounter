@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,15 +27,15 @@ public class CounterAdapter extends RecyclerView.Adapter<CounterAdapter.ViewHold
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView counterTxt;
         private final TextView counterNum;
-        private final Button sumCounter;
-        private final Button subtractCounter;
+        private final ImageButton sumCounter;
+        private final ImageButton subtractCounter;
 
         public ViewHolder(final View view) {
             super(view);
-            counterTxt = view.findViewById(R.id.tv_counter_def);
-            counterNum = view.findViewById(R.id.tv_counter_time);
-            sumCounter = view.findViewById(R.id.iv_sum_counter);
-            subtractCounter = view.findViewById(R.id.iv_subtract_counter);
+            counterTxt = view.findViewById(R.id.tvCounterDef);
+            counterNum = view.findViewById(R.id.tvCounterTime);
+            sumCounter = view.findViewById(R.id.ivSumCounter);
+            subtractCounter = view.findViewById(R.id.ivSubtractCounter);
         }
     }
 
