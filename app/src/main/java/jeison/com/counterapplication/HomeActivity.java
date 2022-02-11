@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import jeison.com.counterapplication.adapter.CounterAdapter;
 import jeison.com.counterapplication.model.Counter;
 
-public class homeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
     private ArrayList<Counter> countersList;
     private RecyclerView recyclerView;
     private TextView totalCounters;
