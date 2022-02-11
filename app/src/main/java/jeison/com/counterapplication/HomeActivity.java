@@ -15,25 +15,31 @@ import jeison.com.counterapplication.adapters.CounterAdapter;
 import jeison.com.counterapplication.models.Counter;
 
 public class HomeActivity extends AppCompatActivity {
-    private ArrayList<Counter> countersList;
+
     private RecyclerView recyclerView;
     private TextView totalCounters;
+
+    private final ArrayList<Counter> countersList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        recyclerView  = findViewById(R.id.rvCounters);
-        totalCounters = findViewById(R.id.tv_total_counter_val);
 
-        countersList = new ArrayList<>();
+        initViews();
 
-        setDef();
+        createCounters();
         setAdapter();
+        setTotalCounters();
+    }
 
-        int listLength = countersList.size();
+    private void initViews(){
+        recyclerView  = findViewById(R.id.rvCounters);
+        totalCounters = findViewById(R.id.tvTotalCounterVal);
+    }
 
-        totalCounters.setText(String.valueOf(listLength));
+    private void setTotalCounters(){
+        totalCounters.setText(String.valueOf(countersList.size()));
     }
 
     private void setAdapter() {
@@ -44,7 +50,7 @@ public class HomeActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
-    private void setDef() {
+    private void createCounters() {
         countersList.add(new Counter("Cups of coffee", 0));
         countersList.add(new Counter("Records played", 0));
         countersList.add(new Counter("Number of times I’ve forgotten my mother’s name " +
